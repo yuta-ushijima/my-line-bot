@@ -20,7 +20,7 @@ module LineBot
     
     # タイムゾーンの設定
     config.time_zone = 'Tokyo'
-    config.i18n.default_local = :ja
+    config.i18n.default_locale = :ja
     config.generators.system_tests = nil
   end
 end
