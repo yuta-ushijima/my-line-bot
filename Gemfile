@@ -32,3 +32,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails'
 # LINEBOT API
 gem 'line-bot-api'
+# google
+gem 'googleauth'
+gem 'google-api-client', '~> 0.11'
+# debug
+gem 'debase'
+gem 'ruby-debug-ide'
