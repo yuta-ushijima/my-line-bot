@@ -1,6 +1,5 @@
 class LinebotController < ApplicationController
   require 'line/bot'
-  require '../../lib/google/google_calendar.rb'
 
   protect_from_forgery :except => [:callback]
 
