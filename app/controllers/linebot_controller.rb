@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
     end
 
     def call_schedule
-      data = Caledar.new
+      data = Calendar.new
       data.get_my_schedule(time_min = Time.now.iso8601, time_max = (Time.now + 24*60*60*7*0).iso8601, max_results = 10)
     end
 end
