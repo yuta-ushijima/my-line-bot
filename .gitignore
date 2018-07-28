@@ -27,6 +27,7 @@
 
 # Ignore dotenv
 .env
+.env.production
 
 # Ignore linebot-json
 /tmp/LINEBOT-718b5900f0fb.json
