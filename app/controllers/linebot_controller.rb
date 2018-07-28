@@ -24,7 +24,7 @@ class LinebotController < ApplicationController
           end
           message = [{
             type: 'text',
-            text: "#{call_google_api}"
+            text: "#{call_schedule}"
           }, {
             type: 'text',
             text: %Q(#{seed1} と #{seed2} !!)
@@ -49,8 +49,8 @@ class LinebotController < ApplicationController
       seeds.sample
     end
 
-    def call_google_api
+    def call_schedule
       data = Caledar.new
-      data.get_my_schedule
+      data.get_my_schedule(time_min = Time.now.iso8601, time_max = (Time.now + 24*60*60*7*0).iso8601, max_results = 10)
     end
 end

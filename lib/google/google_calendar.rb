@@ -11,8 +11,6 @@ class Calendar
   AUTHORIZE_CODE = ENV['AUTHORIZE_CODE'].freeze
   SCOPE = Google::Apis::CalendarV3::AUTH_CALENDAR_READONLY
 
-
-   # Initialize the API
   def initialize
    @service = Google::Apis::CalendarV3::CalendarService.new
    @service.client_options.application_name = APPLICATION_NAME
@@ -37,11 +35,11 @@ class Calendar
     credentials
   end
 
-  def get_my_schedule
+  def get_my_schedule(time_min = Time.now.iso8601, time_max = (Time.now + 24*60*60*7*0).iso8601, max_results = 10)
     # Fetch the next 10 events for the user
     calendar_id = 'primary'
     response = @service.list_events(calendar_id,
-                                  max_results: 10,
+                                  max_results: max_results,
                                   single_events: true,
                                   order_by: 'startTime',
                                   time_min: Time.now.iso8601)
