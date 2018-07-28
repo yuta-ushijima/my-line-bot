@@ -1,5 +1,6 @@
 class LinebotController < ApplicationController
   require 'line/bot'
+  require '../../lib/google/google_calendar.rb'
 
   protect_from_forgery :except => [:callback]
 
@@ -23,7 +24,7 @@ class LinebotController < ApplicationController
           end
           message = [{
             type: 'text',
-            text: "ホゲホゲ"
+            text: "#{call_schedule}"
           }, {
             type: 'text',
             text: %Q(#{seed1} と #{seed2} !!)
@@ -46,5 +47,10 @@ class LinebotController < ApplicationController
     def select_word
       seeds = %w[アイデア1 アイデア2 アイデア3 アイデア4]
       seeds.sample
+    end
+
+    def call_schedule
+      data = Caledar.new
+      data.get_my_schedule(time_min = Time.now.iso8601, time_max = (Time.now + 24*60*60*7*0).iso8601, max_results = 10)
     end
 end

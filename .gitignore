@@ -27,3 +27,16 @@
 
 # Ignore dotenv
 .env
+
+# Ignore linebot-json
+/tmp/LINEBOT-718b5900f0fb.json
+/lib/google/credentials.json
+
+#Ignore .vscode
+.vscode/
+
+# Igonore vendor/bundle
+/vendor/bundle/
+
+# Igonore token.yaml
+token.yaml
