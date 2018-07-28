@@ -24,7 +24,7 @@ class LinebotController < ApplicationController
           end
           message = [{
             type: 'text',
-            text: "#{call_schedule}"
+            text: "ほげ！"
           }, {
             type: 'text',
             text: %Q(#{seed1} と #{seed2} !!)
