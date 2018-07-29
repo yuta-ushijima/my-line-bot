@@ -19,7 +19,7 @@ class Calendar
   end
 
   def authorize
-    client_id   = Google::Auth::ClientId.from_file("/Users/ushijimayuuta/workspace/Rails/line-bot/app/lib/google/credentials.json")
+    client_id   = Google::Auth::ClientId.from_file(CREDENTIALS_PATH)
     token_store = Google::Auth::Stores::FileTokenStore.new(file: TOKEN_PATH)
     authorizer  = Google::Auth::UserAuthorizer.new(client_id, SCOPE, token_store)
     user_id     = 'default'
