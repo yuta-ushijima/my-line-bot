@@ -33,6 +33,7 @@
 /tmp/LINEBOT-718b5900f0fb.json
 /lib/google/credentials.json
 /app/lib/google/credentials.json
+/app/lib/google/client_secret.json
 
 #Ignore .vscode
 .vscode/

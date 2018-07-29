@@ -7,7 +7,6 @@ class Calendar
   OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'.freeze
   APPLICATION_NAME = ENV['APPLICATION_NAME'].freeze
   CREDENTIALS_PATH = ENV['CREDENTIALS_PATH'].freeze
-  # CREDENTIALS_PATH =""
   TOKEN_PATH = 'token.yaml'.freeze
   AUTHORIZE_CODE = ENV['AUTHORIZE_CODE'].freeze
   SCOPE = Google::Apis::CalendarV3::AUTH_CALENDAR_READONLY
